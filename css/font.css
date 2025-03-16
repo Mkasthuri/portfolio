@@ -1,0 +1,29 @@
+@font-face{font-family:FontAwesome;src:url("./fontawesome-webfont.woff2");font-weight:400;font-style:normal;}.fa{display:inline-block;font:14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+
+.fa-phone:before {
+    content: "\f095";
+}
+.fa-long-arrow-right:before {
+    content: "\f178";
+}
+.fa-arrow-up-long, .fa-long-arrow-up:before{
+   content: "\f176";
+}
+.fa-long-arrow-left:before {
+    content: "\f177";
+}
+.fa-whatsapp:before {
+    content: "\f232";
+}
+.fa-code:before {
+    content: "\f121";
+}
+.fa-wordpress:before {
+    content: "\f19a";
+}
+.fa-server:before {
+    content: "\f233";
+}
+.fa-file:before {
+    content: "\f15b";
+}

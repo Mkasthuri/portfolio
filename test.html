@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Animation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f0f0f0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .typed-text {
+      font-size: 2rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+      .typed-text { font-size: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .typed-text { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="typed-text">
+    <span id="typed-output"></span>
+  </div>
+
+  <!-- Typed.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    const typed = new Typed('#typed-output', {
+      strings: ["Web Designer", "Web Developer", "UI/UX Designer", "Stylish Model", "Content Writer"],
+      typeSpeed: 70,
+      backSpeed: 50,
+      backDelay: 2000,
+      startDelay: 100,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|',
+    });
+  </script>
+
+</body>
+</html>
