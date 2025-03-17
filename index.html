@@ -1,7 +1,9 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-     <meta lang="en">   
+     <meta lang="en"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="robots" content="noindex, nofollow">  
      <title>Portfolio</title>
      <link rel="stylesheet" href="./css/bootstrap-min.css">
      <link rel="stylesheet" href="./css/style.css">
@@ -10,16 +12,16 @@
 <body>
  <!--header--> 
  <header class="position-sticky sticky-top">
-  <div class="container  header-bg my-3 py-4">
+  <div class="container  header-bg my-lg-3 py-4">
     <ul class="nav nav-pills w-100 justify-content-around" id="vls-tab" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" id="v-pills-about-tab" data-bs-toggle="tab" href="#v-pills-about" role="tab" aria-controls="v-pills-about" aria-selected="true">About</a>
+        <a class="nav-link active" id="about-tab" data-bs-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="v-pills-work-tab" data-bs-toggle="tab" href="#v-pills-work" role="tab" aria-controls="v-pills-work" aria-selected="false">Work Experience</a>
+        <a class="nav-link" id="work-tab" data-bs-toggle="tab" href="work" role="tab" aria-controls="work" aria-selected="false">Work Experience</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="v-pills-contact-tab" data-bs-toggle="tab" href="#v-pills-contact" role="tab" aria-controls="v-pills-contact" aria-selected="false">My Contact</a>
+        <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
       </li>
       <li class="nav-item">
         <a class="res-btn"  href="./resume/kasthuri-resume.pdf" target="_blank">My Resume</a>
@@ -30,7 +32,7 @@
 </header>
     <!-- Tab Content -->
     <div class="tab-content">
-      <div class="tab-pane fade show active" id="v-pills-about" role="tabpanel" aria-labelledby="v-pills-about-tab">
+      <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
         <div class="container py-lg-4">
           <h1 class="hed1"><span class="small-h1">Hello</span><br>I'm Kasthuri<br>
           <span id="typed-output"></span>
@@ -41,8 +43,8 @@
           that align with brand identity and business goals.</p>
           <a class="cv-btn" href="./resume/kasthuri-resume.pdf" target="_blank">Download CV <i class="fa fa-long-arrow-right arrow-icon"></i></a>
           </div>
-          <div class="container py-lg-5">
-          <h2 class="text-center mb-5">What I Do?</h2>
+          <div class="container">
+          <h2 class="text-center my-5">What I Do?</h2>
           <div class="row g-3 px-lg-5">
             <div class="col-12 col-md-6 col-lg-6">
             <div class="serv-box">
@@ -86,13 +88,62 @@
        </div>
       </div>
       
-      <div class="tab-pane fade" id="v-pills-work" role="tabpanel" aria-labelledby="v-pills-work-tab">
-        <p>Work Experience content goes here...</p>
+      <div class="tab-pane fade" id="work" role="tabpanel" aria-labelledby="work-tab">
+        <p class="text-white">Work Experience content goes here...</p>
       </div>
-      <div class="tab-pane fade" id="v-pills-contact" role="tabpanel" aria-labelledby="v-pills-contact-tab">
-        <p>My Contact content goes here...</p>
-      </div> 
-  </div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="col-lg-4 col-md-4 col-12 form-section p-3">
+          <h2 class="text-center">Fill Out The Form</h2>
+          <p id="msg"></p>
+          <p id="success"></p>
+        <div id="hide_form">
+             <div class="row form-contact contact_form">
+                <div class="col-12">
+                   <div class="form-group">
+                      <input class="form-control valid" name="name" id="name" type="text" placeholder="Enter your name" required="">
+                   </div>
+                </div>
+                <div class="col-12">
+                 <div class="form-group">
+                    <input class="form-control" name="phone" id="phone" type="tel" placeholder="Enter Phone Number" required="">
+                 </div>
+              </div>
+                <div class="col-12">
+                   <div class="form-group">
+                      <input class="form-control valid" name="email" id="email" type="email" placeholder="Enter email address" required="">
+                   </div>
+                </div>
+                <div class="col-12">
+                   <div class="form-group">
+                      <textarea class="form-control w-100" name="information" id="information" cols="5" rows="3" placeholder=" Enter Message"></textarea>
+                   </div>
+                </div>
+             </div>
+             <div class="row">
+             <div class="col-lg-4  col-sm-5 ">
+
+                <img src="captchaimg.php" alt="captcha" width="101" height="41" id="captcha" class="px-2 mt-2">
+              </div>
+              <div class="col-lg-2 col-sm-1">
+                <span>
+                  <i class="fa fa-refresh p-3 me-3" aria-hidden="true" onclick="refreshCaptcha();"></i>
+                </span>
+              </div>
+              <div class="col-lg-6 col-sm-6">
+
+                <input type="text" name="captcha_val" id="captcha_val" class="form-control px-2 mt-2" placeholder="Enter Captcha">
+
+              </div>
+             </div>
+             <div class="form-group mt-3 text-center">
+                <button type="submit" id="sendnow" name="submit" class="button button-contactForm boxed-btn">Send</button>
+                 <div id="subloader"></div>
+            </div>
+            </div>
+
+       <!--form ends-->
+</div>
+  </div> 
   <!--GO TO TOP-->
   <button id="scrollTopBtn" title="Go to top">
     <i class="fa fa-long-arrow-up"></i>
@@ -105,5 +156,7 @@
  <script src="./js/bundle.js"></script> 
  <script src="./js/type.js"></script>   
  <script src="./js/custom.js"></script>
+ <script src="./js/jquery-3.3.1.min.js"></script>
+ <script defer src= "contact_script.js"></script>
 </body>    
 </html>

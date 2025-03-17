@@ -181,9 +181,27 @@ h2{
     z-index: 9999;
     display: none;
 }
-
+.form-section{
+    margin: auto;
+}
+input{
+    margin-bottom: 15px;
+}
+.fa-refresh{
+    color:#fff;
+    font-size: 18px;
+}
 @media (max-width: 768px) {
 .chatty1 {
    display: inline-block !important;
+}
+.nav-link{
+   margin-bottom: 15px;
+}
+.hed1 {
+    font-size: 32px;
+}
+.ser-head {
+    justify-content: start;
 }
 }

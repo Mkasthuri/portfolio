@@ -27,3 +27,6 @@
 .fa-file:before {
     content: "\f15b";
 }
+.fa-arrows-rotate:before, .fa-refresh:before, .fa-sync:before {
+    content: "\f021";
+}
