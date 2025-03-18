@@ -86,6 +86,10 @@ h2{
   background-color: #f4f4f4;
   border-radius: 20px;
   color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height:100%;
   box-shadow: 2px 2px #ff014f;
   transition: 0.3s;
@@ -99,7 +103,7 @@ h2{
   color:#ff014f ;
   background-color: #fff;
 }
-.serv-box:hover h3{
+.serv-box:hover h3,.serv-box:hover .serv-anch{
   color:#fff;
 }
 
@@ -125,10 +129,11 @@ h2{
   font-weight: 600;
   color: #000;
 }
-.serv-para{
+.serv-anch{
+  color: #000;
   font-family: 16px;
   margin-top: 15px;
-  text-align: center;
+  text-decoration: none;
 }
 #scrollTopBtn {
   position: fixed;
@@ -232,9 +237,12 @@ input{
 .ser-head {
   justify-content: start;
 }
+.serv-box {
+  padding:15px;
+}
 }
 .tab-left{
-    padding-left: 100px
+    padding-left: 70px;
 }
 .serv-tab .nav-link.active{
     color:#fff;
@@ -245,20 +253,19 @@ input{
 .serv-tab .nav-link{
     color:#ffffff;
     font-size: 24px;
-    font-weight: 700;
-    padding-bottom: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
     line-height:1.4em;
 }
-.fa-minus,.arrow-btn .fa-long-arrow-right{
+.fa-minus,.fa-plus{
   font-size: 24px;
-  color:#ff014f;
+  color:#ffffff;
   font-weight: 700;
-  margin-left:15px;
 }
 .tab-right h3{
     color:#ffffff;
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 600;
     letter-spacing: .04em;
     padding-bottom: 20px;
     margin: 0px 0px 25px;

@@ -15,18 +15,15 @@
 .fa-whatsapp:before {
     content: "\f232";
 }
-.fa-code:before {
-    content: "\f121";
+.fa-envelope:before {
+    content: "\f0e0";
 }
-.fa-wordpress:before {
-    content: "\f19a";
+.fa-map-marker:before {
+    content: "\f041";
 }
-.fa-server:before {
-    content: "\f233";
+.fa-minus:before, .fa-subtract:before {
+    content: "\f068";
 }
-.fa-file:before {
-    content: "\f15b";
-}
-.fa-arrows-rotate:before, .fa-refresh:before, .fa-sync:before {
-    content: "\f021";
+.fa-plus:before {
+    content: "\f067";
 }
