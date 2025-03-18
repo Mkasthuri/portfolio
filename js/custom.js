@@ -8,7 +8,7 @@ const typed = new Typed('#typed-output', {
     showCursor: true,
     cursorChar: '|',
   });
- 
+
 window.onscroll = function() {
   const btn = document.getElementById("scrollTopBtn");
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -22,4 +22,3 @@ window.onscroll = function() {
 document.getElementById("scrollTopBtn").addEventListener("click", function(){
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-

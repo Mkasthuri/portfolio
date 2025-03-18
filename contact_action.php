@@ -10,53 +10,50 @@ require 'vendor/autoload.php';
 $mail = new PHPMailer(true);
 session_start();
 
-$name= $_POST['name'];
+$fname = $_POST['fname'];
+$mobile = $_POST['mobile'];
 $email = $_POST['email'];
-$phone = $_POST["phone"];
-$information = $_POST['information'];
+$info = $_POST['info'];
 $error = array();
 
 
-if(empty($name))
+if(empty($fname))
 {
      $error[] = 'Please Enter a Name';
 }
-else if (strlen($name) < 3)
+else if (strlen($fname) < 3) 
 {
     $error[] = 'Please Enter a Name Atleast Three Characters';
 }
-else if (strlen($name) > 3)
+else if (strlen($fname) > 3) 
 {
-    if (!preg_match("/^[a-zA-Z\s]+$/", $name))
+    if (!preg_match("/^[a-zA-Z\s]+$/", $fname)) 
     {
     $error[] = 'Digits or Special Characters Not Allowed) ';
     }
 }
-else if (strlen($name) > 15)
+else if (strlen($fname) > 15) 
 {
     $error[] = 'Full Name: Max Length 15 Characters Not Allowed';
 }
 
-if (empty($phone)) {
-    $error[] = "Please Enter a Mobile Number";
+if (empty($mobile)) {
+   $error[] = "Please Enter a Mobile Number"; 
 }
-elseif (!preg_match("/^[0-9]{10}$/", $phone)) {
-    $error[] = "Please Enter a Valid Mobile Number";
+elseif(!preg_match("/^[0-9]{10}+$/", $mobile))
+{
+    $error[] = "Please Enter a Valid Mobile Number"; 
 }
 
-if(empty($information))
+if(empty($info))
 {
      $error[] = 'Please Enter a Message';
 }
-else if (strlen($information) < 5)
-{
-    $error[] = 'Please Enter a Message Atleast Five Characters';
-}
-else if (strlen($information) > 2)
-{
-    if (!preg_match("/^[a-zA-Z\s]+$/", $information))
+else if(strlen($info)){
+    
+    if (!preg_match("/^[a-zA-Z\s]+$/", $info)) 
     {
-    $error[] = 'Digits or Special Characters Not Allowed) ';
+    $error[] = 'Digits or Special Characters Not Allowed';
     }
 }
 $erro = array();
@@ -83,7 +80,8 @@ if ($error == NULL) {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
-   $mail->setFrom('kasthuriinn@gmail.com', $fname);
+    $mail->From = 'kasthuriinn@gmail.com';
+    $mail->FromName = $fname;
     // Email ID from which you want to send the email
     $mail->setFrom('kasthuriinn@gmail.com');
     // Recipient Email ID where you want to receive emails
@@ -91,7 +89,7 @@ if ($error == NULL) {
     $mail->isHTML(true);
     $mail->Subject = 'Portfolio Form Submission';
 
-   $mail->Body = "<h4>Name : $name <br><br>Mobile Number : $phone<br><br>Email : $email <br><br> Message : $information </h4>";
+   $mail->Body = "<h4>Name : $fname <br><br>Mobile Number : $mobile<br><br>Email : $email  <br><br> Message : $info </h4>";
 
     //Success
     if ($mail->Send()) {

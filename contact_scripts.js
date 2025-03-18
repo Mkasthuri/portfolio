@@ -1,18 +1,17 @@
 $(document).ready(function () {
     $("#sendnow").click(function () {
-        var name = $('#name').val().trim();
-        var phone = $('#phone').val().trim();
+        var fname = $('#fname').val().trim();
+        var mobile = $('#mobile').val().trim();
         var email = $('#email').val().trim();
-        var captcha_val = $('#captcha_val').val().trim();
-        var information = $('textarea[name="information"]').val();
+        var info = $('textarea[name="info"]').val();
         $.ajax({
             method: "POST",
             url: "contact_action.php",
-            data: {name: name, phone: phone, email:email, captcha_val: captcha_val, information: information},
+            data: {fname: fname, mobile: mobile, email:email, info: info},
             beforeSend: function () {
                 $('#sendnow').hide();
                 $('#subloader').show();
-                $('#subloader').html('<img src="loader.gif" height="100">');
+                $('#subloader').html('Sending...');
             },
             success: function (data) {
                 //$('#msg').html(data);
@@ -24,16 +23,12 @@ $(document).ready(function () {
                 $('#subloader').html("");
                 $('#sendnow').show();
                if (status == 'success') {
-                    $('#hide_form').hide();
-                    $('#success').html('Thank you ' + name + ' ! Your message has been sent. We will contact you as soon as possible.. ');
-
+                     window.location.href = 'thanks.html';
+                   
                 }
-                $("#captcha").attr('src', 'captchaimg.php');
+               
 
             }
         });
     });
 });
-function refreshCaptcha() {
-    $("#captcha").attr('src', 'captchaimg.php');
-}
