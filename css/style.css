@@ -246,14 +246,13 @@ input{
 }
 .serv-tab .nav-link.active{
     color:#fff;
-    padding-bottom: 30px;
-    border-radius: 0;
     border-bottom: 2px solid #ff014f;
 }
 .serv-tab .nav-link{
     color:#ffffff;
     font-size: 24px;
     font-weight: 600;
+    padding: 30px;
     margin-bottom: 30px;
     line-height:1.4em;
 }
@@ -332,7 +331,7 @@ font-size: 20px;
   background: url(../img/onpage-seo.webp) center/cover no-repeat;
 }
 .work-section .sub-sect5 {
-  background: url(../img/server-management.webp) center/cover no-repeat;
+  background: url(../img/tools.webp) center/cover no-repeat;
 }
 
 .work-section .hed5-block::before {

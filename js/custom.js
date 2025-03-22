@@ -1,5 +1,5 @@
 const typed = new Typed('#typed-output', {
-    strings: ["Web Designer", "UI/UX Designer", "Stylish Model"],
+    strings: ["Web Designer", "UI/UX Designer"],
     typeSpeed: 50,
     backSpeed: 50,
     backDelay: 1000,
