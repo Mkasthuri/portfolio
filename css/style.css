@@ -80,6 +80,16 @@ h2{
   font-weight: 600;
   color: #fff;
 }
+.hed3{
+  font-size: 18px;
+  font-weight: 600;
+  color:#ff014f;
+}
+.fa-ul{
+  color: #fff;
+  line-height: 32px;
+  margin-bottom: 40px;
+}
 .serv-box{
   position: relative;
   padding: 20px 30px;
@@ -186,7 +196,7 @@ h2{
   text-align: center;
   position: fixed;
   left: 2%;
-  top: 90%;
+  top: 97%;
   z-index: 9999;
   display: none;
 }
